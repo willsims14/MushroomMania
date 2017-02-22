@@ -4,13 +4,46 @@
 	<title>Mushroom Mania</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<body>
+<body ng-app="MushroomMania">
+
+
 
 <header><h1>Mushroom Mania</h1></header>
 
+<div id="userArea" >
+	<input type="text" id="userInput" class="col-xs-12" ng-model="searchText"> <br>
+	<form>
+		<input type="radio" name="mushType" value="false" ng-model="poisonModel" ng-value="false" >Poisonous<br>
+		<input type="radio" name="mushType" value="true"  ng-model="poisonModel" ng-value="true" >Not Poisonous<br>
+	</form>
+</div>
 
 
 
+<hr>
+
+
+
+
+
+<div ng-controller="listCtrl">
+	<div class="col-xs-12" ng-view>
+
+	</div>
+</div>
+
+
+
+
+
+
+<script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js">
+</script>
+<script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="lib/node_modules/angular-route/angular-route.min.js"></script>
 <script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/controllers/MushroomCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/listCtrl.js"></script>
 </body>
 </html>
