@@ -1,0 +1,11 @@
+	<ul ng-repeat="shroom in mushrooms | filter: {name: searchText, edibleBool: poisonModel}">
+		<li>
+			<span class="col-sm-6">{{shroom.name}} | </span>
+			<span class="col-sm-3"><small>{{shroom.edible}}</small> </span><br><br>
+			<span class="col-sm-3"><i class="shroomDesc">{{shroom.description}}</i></span>
+		</li>
+		<hr>
+	</ul>
+
+
+<!-- 	<div ng-repeat="mushroom in mushrooms | filter: {name: filterText, edible: lethality}"> -->
